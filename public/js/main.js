@@ -68,6 +68,14 @@ rtc.startVideo(function (err) {
   }
 });
 
+$('#camera-button').click(function () {
+  rtc.changeCamera(function (err) {
+    if (err) {
+      rtc = false;
+    }
+  });
+});
+
 $('#music').click(music.toggle);
 
 $('.close').click(function () {
